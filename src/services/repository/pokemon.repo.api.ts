@@ -22,11 +22,11 @@ export interface Pokemon {
 export class PokemonApiRepo {
   url: string;
   constructor(public storeName: string = 'Pokemon') {
-    this.url = 'https://pokeapi.co/api/v2/pokemon/clefairy';
+    this.url = 'https://pokeapi.co/api/v2/pokemon/';
   }
 
-  async getPoke(): Promise<Pokemon> {
-    const resp = await fetch(this.url);
+  async getPoke(url: any = this.url): Promise<Pokemon> {
+    const resp = await fetch(url);
     const data = (await resp.json()) as Pokemon;
     return data;
   }
