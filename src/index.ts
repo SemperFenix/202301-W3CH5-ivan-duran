@@ -1,9 +1,9 @@
 /* eslint-disable no-new */
 import { Header } from './components/header/header';
-import { PokemonApiRepo } from './models/pokemon';
+import { PokemonApiRepo } from './services/repository/pokemon.repo.api';
 
 new Header('.app');
 
-const p = await new PokemonApiRepo().getPoke().then((r) => r.name);
+const p = await new PokemonApiRepo().getPoke();
 
-console.log(`${p} es farlopero'`);
+console.log(p.stats);
