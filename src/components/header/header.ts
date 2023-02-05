@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import { Component } from '../component/component';
+import './header.scss';
 
 export class Header extends Component {
   constructor(public selector: string, public title: string = 'Learning DOM') {
@@ -12,8 +13,9 @@ export class Header extends Component {
   private createTemplate() {
     return `
       <header class="header">
+              <img src="./assets/images/pokemon-logo.svg" alt="" srcset="">
+
         <h1 class = "header__title">Otra Pokèdex más</h1>
-        <img src="./assets/images/pokemon-logo.svg" alt="" srcset="">
       </header>
     `;
   }

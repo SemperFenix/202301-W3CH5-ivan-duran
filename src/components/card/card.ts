@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Pokemon } from 'pokedex-promise-v2';
 import { Component } from '../component/component';
+import './card.scss';
 
 export class Card extends Component {
   public tasks: any;
@@ -13,11 +14,15 @@ export class Card extends Component {
   }
 
   async load() {
-    console.log(this.pokemonURL);
     const resp = await fetch(this.pokemonURL);
     this.tasks = (await resp.json()) as Pokemon;
-    this.template = `<li><img src = "${this.tasks.sprites.front_default}">
-    ${this.tasks.name.toUpperCase()}</li>`;
+    this.template = `<li class="poke-list__card"><i class="fa-solid fa-star"></i><img class = "sprite" src = "${
+      this.tasks.sprites.front_default
+    }"><span>
+    ${
+      this.tasks.name.charAt(0).toUpperCase() +
+      this.tasks.name.slice(1, this.tasks.name.length)
+    }</span></li>`;
     this.render('beforeend');
   }
   // Render(place: globalThis.InsertPosition) {
@@ -36,8 +41,6 @@ export class Card extends Component {
   // }
 
   createTemplate() {
-    return `
-     <li class="serie">
-            </li>`;
+    return ``;
   }
 }

@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 
 import { Component } from '../component/component';
+import './footer.scss';
 
 export class Footer extends Component {
   constructor(public selector: string, public title: string = 'Learning DOM') {
     super();
     this.template = this.createTemplate();
-    this.render('afterbegin');
+    this.render('afterend');
   }
 
   private createTemplate() {
