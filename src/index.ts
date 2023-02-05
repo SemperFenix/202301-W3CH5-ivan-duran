@@ -5,9 +5,11 @@ import { PokemonApiRepo } from './services/repository/pokemon.repo.api';
 import './index.scss';
 import { Footer } from './components/footer/footer';
 
-export const p = await new PokemonApiRepo().getPoke();
+async function loadMain() {
+  const p = await new PokemonApiRepo().getPoke();
+  new Main('header', p, p.results);
+}
 
 new Header('.app');
-new Main('header', p, p.results);
-
+loadMain();
 new Footer('main');
