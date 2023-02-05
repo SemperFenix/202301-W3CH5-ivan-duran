@@ -1,0 +1,52 @@
+.poke-list__card {
+  position: relative;
+  list-style: none;
+  display: flex;
+  width: 300px;
+  height: 200px;
+  color: bisque;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 2rem;
+  background-color: #5c0819;
+  border-radius: 20px;
+  font-size: 1.7rem;
+  font-family: 'Spline Sans Mono', monospace;
+}
+
+.fa-solid {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 2rem;
+
+  z-index: 4;
+}
+.sprite {
+  position: absolute;
+
+  padding: 1rem;
+  width: 170px;
+  -webkit-animation: action 0.5s infinite alternate;
+  animation: action 0.5s infinite alternate;
+}
+
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
