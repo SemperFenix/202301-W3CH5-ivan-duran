@@ -13,7 +13,7 @@ export class Main extends Component {
     // La hacemos de uso interno con la etiqueta private
     return `
     <main class="main">
-     <ul class = "poke-list"></ul>
+      <ul class = "poke-list"></ul>
     </main>`;
   }
 
