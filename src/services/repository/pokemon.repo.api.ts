@@ -25,7 +25,7 @@ export class PokemonApiRepo {
     this.url = 'https://pokeapi.co/api/v2/pokemon/';
   }
 
-  async getPoke(url: any = this.url): Promise<Pokemon> | Promise<any> {
+  async getPoke(url: any = this.url): Promise<any> {
     const resp = await fetch(url);
     const data = (await resp.json()) as Pokemon;
     return data;
