@@ -8,3 +8,25 @@
   background-color: #1c2a43;
   width: 100%;
 }
+
+.pages {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+  background-color: #1c2a43;
+
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 3rem;
+    width: 10rem;
+    background-color: orangered;
+    border-radius: 20px;
+    span {
+      font-size: 2rem;
+    }
+  }
+}
