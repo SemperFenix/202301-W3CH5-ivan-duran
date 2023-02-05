@@ -5,9 +5,11 @@ import { PokemonApiRepo } from './services/repository/pokemon.repo.api';
 import './index.scss';
 import { Footer } from './components/footer/footer';
 
-const p = await new PokemonApiRepo().getPoke();
-console.log(p);
+export const p = await new PokemonApiRepo().getPoke();
 
 new Header('.app');
-new Main('header', p.results);
+if (location.pathname === '/home') {
+  new Main('header', p, p.results);
+}
+
 new Footer('main');
