@@ -8,8 +8,6 @@ import { Footer } from './components/footer/footer';
 export const p = await new PokemonApiRepo().getPoke();
 
 new Header('.app');
-if (location.pathname === '/home') {
-  new Main('header', p, p.results);
-}
+new Main('header', p, p.results);
 
 new Footer('main');
